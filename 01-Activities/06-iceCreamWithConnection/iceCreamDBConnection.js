@@ -1,6 +1,6 @@
-const mysql = require('mysql');
+const { createConnection } = require('mysql');
 
-const connection = mysql.createConnection({
+const client = createConnection ({
   host: 'localhost',
 
   // Your port, if not 3306
@@ -10,12 +10,12 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Be sure to update with your own MySQL password!
-  password: '',
-  database: 'ice_creamDB',
+  password: 'Maythe4thbewithyou!',
+  database: 'playlistdb',
 });
 
-connection.connect((err) => {
+client.connect((err) => {
   if (err) throw err;
-  console.log(`connected as id ${connection.threadId}`);
-  connection.end();
+  console.log(`connected as id ${client.threadId}`);
+  client.end();
 });

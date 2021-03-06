@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Be sure to update with your own MySQL password!
-  password: '',
+  password: 'Maythe4thbewithyou!',
   database: 'ice_creamDB',
 });
 
@@ -29,7 +29,7 @@ const deleteProduct = () => {
   connection.query(
     'DELETE FROM products WHERE ?',
     {
-      flavor: 'strawberry',
+      flavor: 'Cookie Dough',
     },
     (err, res) => {
       if (err) throw err;
@@ -69,8 +69,8 @@ const createProduct = () => {
   const query = connection.query(
     'INSERT INTO products SET ?',
     {
-      flavor: 'Rocky Road',
-      price: 3.0,
+      flavor: 'Cookies and Cream',
+      price: 5.0,
       quantity: 50,
     },
     (err, res) => {

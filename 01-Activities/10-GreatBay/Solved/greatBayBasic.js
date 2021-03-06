@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Your password
-  password: '',
+  password: 'Maythe4thbewithyou!',
   database: 'greatBay_DB',
 });
 
